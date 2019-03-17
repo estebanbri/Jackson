@@ -10,14 +10,17 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
 
+        // De-Serializando
         String json1 = "{\"id\":\"102\",\"MINOMBRE\":\"Jose\"}";
         MiBean bean1 = toBean(json1);
         System.out.println(bean1);
 
-        MiBean bean2 = new MiBean("101", " Esteban");
+        // Serializando
+        MiBean bean2 = new MiBean("101", "Esteban");
         String json2 = toJson(bean2);
         System.out.println(json2);
 
+        // Serializando
         List<MiBean> lista = Arrays.asList(
                 new MiBean("222", " Roberto"),
                 new MiBean("223", " Andres")

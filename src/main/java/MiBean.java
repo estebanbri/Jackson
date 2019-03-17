@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public class MiBean {
 
@@ -34,6 +35,15 @@ public class MiBean {
     @Override
     public String toString() {
         return "id=" + id + ", nombre=" + nombre;
+    }
+
+    //@JsonValue
+    public String serialize(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(id);
+        sb.append("-");
+        sb.append(nombre);
+        return sb.toString();
     }
 
 }
